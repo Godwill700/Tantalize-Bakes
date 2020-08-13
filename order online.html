@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Online</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/order.css">
+    <script src="https://kit.fontawesome.com/6998af91f9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="mainhead">Tantalize Bakes</h1>
+            <h6 class="submain">....A taste of the future</h6>
+        </div>
+    </header>
+    <nav>
+        <div class="nav-container">
+            <img class="logo" src="images/cupcakelogo.jpg" alt="logo" width="50">
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="/index.html"> Home</a></li>
+                    <div class="dropdown">
+                        <li><a href="#"> Categories <i class="fas fa-angle-down"></i></a>
+                            <div class="dropdown-content">
+                                <ul class="dropdown-links">
+                                    <li><a href="#"> Themed Cakes</a></li>
+                                    <li><a href="#">Fancy Cakes</a></li>
+                                    <li><a href="#">Regular Cakes</a></li>
+                                    <li><a href="#">Cupcakes</a></li>
+                                    <li><a href="#">Cookies</a></li>
+                                    <li><a href="#">Extras</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </div>
+                    <li><a href="/gallery.html"> Gallery</a></li>
+                    <div class="dropdown">
+                        <li><a href="#"> Promotions <i class="fas fa-angle-down"></i></a>
+                            <div class="dropdown-content">
+                                <ul class="dropdown-links">
+                                    <li><a href="#">Father's Day</a></li>
+                                    <li><a href="#">Mother's Day</a></li>
+                                    <li><a href="#">Valentines</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </div>
+                    <li><a href="/order online.html"> Order online </a></li>
+                </ul>
+            </div>
+            <!--nav-links-container-->
+            <button id="contact-btn"> <a href="#">Contact Us</a> </button>
+        </div>
+    </nav>
+    <br>
+    <div>
+        <h1 class="pagehead">Order online</h1>
+    </div>
+    <br>
+
+    <form id="onlineform">
+        <div class="form-container">
+            <div class="form-group personal-info">
+                <h3 class="contact-info">Contact info</h3>
+                <div id="namevalid"></div>
+                <div>
+                    <label class="label-text" for="full-name">Full Name: </label>
+                    <input class="block" type="text" value="" id="full-name" required>
+                </div>
+                <div id="emvalid"></div>
+                <div>
+                    <label for="phone"> Phone: </label>
+                    <input class="block" type="tel" value="" id="phone">
+                </div>
+                <div>
+                    <label for="email-input"> Email: </label>
+                    <input class="block" type="email" value="" id="email-input">
+                </div>
+                <div id="numvalid"></div>
+                <div>
+                    <label for="form-address"> Address: </label>
+                    <input class="block" type="text" value="" id="form-address">
+                </div>
+            </div><!-- personal-info -->
+
+            <div class="cake-order">
+                <div id="ctvalid"></div>
+                <div>
+                    <label for="cake-type">Cake type: </label>
+                    <select class="block" name="cake-type" id="cake-type">
+                        <option value="Themed Cake">Themed Cake</option>
+                        <option value="Themed Cake">Fancy Cake</option>
+                        <option value="Themed Cake">Themed Cupcake</option>
+                        <option value="Themed Cake">Fancy Cupcake</option>
+                        <option value="Themed Cake">Regular Cupcake</option>
+                        <!-- This is another way to specify select-->
+                        <option label="another way" value="another way"></option>
+                    </select>
+                </div>
+                <div id="datevalid"></div>
+                <div>
+                    <label for="collection-date"> Collection Date: </label>
+                    <input class="block" type="date" value="" id="collection-date">
+                </div>
+                <div>
+                    <label for="collection-time"> Collection Time: </label>
+                    <input class="block" type="time" value="" id="collection-time" min="08:00" max="18:00">
+                </div>
+                <div class="block size-options">
+                    <input type="radio" value="small" id="small" name="size">
+                    <label for="small"> Small </label>
+                    <input type="radio" value="Medium" id="medium" name="size">
+                    <label for="medium"> Medium </label>
+                    <input type="radio" value="Large" id="large" name="size">
+                    <label for="large"> Large </label>
+                    <input type="radio" value="XLarge" id="xlarge" name="size">
+                    <label for="xlarge"> XLarge </label>
+                </div>
+                <div id="txtvalid"></div>
+                <div>
+                    <label for="cake-personality"> Cake Personality: </label>
+                    <input class="block" type="text" value="" id="cake-personality"
+                        placeholder="Enter the type of person">
+                </div>
+                <div id="txtvalid"></div>
+                <div>
+                    <label for="flavour-filling"> Flavour and Filling: </label>
+                    <input class="block" type="text" value="" id="flavour-filling">
+                </div>
+                <div id="cmvalid"></div>
+                <div>
+                    <label for="cake-message"> Cake message: </label>
+                    <input class="block" type="text" value="" id="cake-message">
+                </div>
+                <div id="decovalid"></div>
+                <div>
+                    <label for="deco-instructions"> Decoration Instructions: </label>
+                    <input class="block" type="text" value="" id="deco-instructions"
+                        placeholder="Enter additional decoration instructions">
+                </div>
+                <div>
+                    <label for="picture-sample">Picture Sample if available</label>
+                    <input class="block" type="file" name="file" id="picture-sample">
+                </div>
+            </div><!-- cake-order -->
+            <div><input type="submit" value="Send" id="sbtn"></div>
+        </div><!-- form-container -->
+    </form>
+    <div class="current">
+        <h4>Current Orders</h4>
+        <ol class="c_order"></ol>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <ul>
+                    <li>About us</li>
+                    <li>About us</li>
+                    <li>About us</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <ul>
+                    <li>Contact us</li>
+                    <li>Contact us</li>
+                    <li>Contact us</li>
+                </ul>
+            </div>
+            <div id="powered-by"><span>Site by Beastboy Tech</span></div>
+        </div>
+    </footer>
+    <script src="./js/order.js"></script>
+</body>
+
+
+</html>
