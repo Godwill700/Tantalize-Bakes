@@ -1,0 +1,87 @@
+#Home {
+  height: 100vh;
+}
+
+#Home > Nav {
+  height: 10vh;
+}
+
+#About {
+  height: 100vh;
+}
+
+.about-container {
+  width: 80%;
+  margin: auto;
+  padding: 1em;
+}
+
+.about-container .grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+}
+
+.about-container .grid-container .message {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border: 5px solid indigo;
+}
+
+.about-container .grid-container .message > h2 {
+  font-size: 2em;
+}
+
+.about-container .grid-container .message p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about-container .grid-container img {
+  width: 400px;
+  float: right;
+  border: 5px solid indigo;
+}
+
+.about-container .message-container {
+  padding: 1em;
+  font-size: 1.4em;
+  padding: 0.75em;
+}
+
+#testimonial-head {
+  font-size: 1.4em;
+  padding: 20px;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  margin: 20px auto 20px 48px;
+}
+
+.testimonial-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.testimonial-container .testimony {
+  width: 16.66%;
+  padding: 10px;
+  background-color: #fec0e3;
+  border-radius: 10px;
+  font-style: italic;
+}
+
+/********** Desktop**********/
+/*******Tablet devices********/
+/********** Mobile phones**********/
+/*# sourceMappingURL=layout-dir.css.map */

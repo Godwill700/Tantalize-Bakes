@@ -5,21 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tantalize Bakes</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rosario:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6998af91f9.js" crossorigin="anonymous"></script>
 </head>
 
 
 <body>
+    <Section id="Home">
     <header>
-        <div class="header-container">
-            <h1 class="mainhead">Tantalize Bakes</h1>
-            <h6 class="submain">....A taste of the future</h6>
+        <div class="external-links-container">
+            <div class="external-contact">
+                <span>|E:tantalziebakes@gmail.com</span>
+            </div>
+        <div class="social-media-links">
+            <a href="https://github.com/Godwill700" target="_blank" <i class="fab fa-facebook-square"></i></a>
+            <a href="https://github.com/Godwill700" target="_blank" <i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/Godwill700" target="_blank" <i class="fab fa-whatsapp"></i></a>
         </div>
-    </header>
-    <nav>
+        </div>
+        
+        <nav>
         <div class="nav-container">
-            <img class="logo" src="images/cupcakelogo.jpg" alt="logo" width="50">
+            <div class="brand-container">
+                <a href="#Home"><img class="logo" src="./images/logo/Tantalize Bakes logo 09.png" alt=""></a>
+                
+            </div>
             <div class="nav-links-container">
                 <ul class="nav-links">
                     <li><a href="/index.html"> Home</a></li>
@@ -39,108 +56,214 @@
                     </div>
                     <li><a href="/gallery.html"> Gallery</a></li>
                     <div class="dropdown">
-                        <li><a href="#"> Promotions <i class="fas fa-angle-down"></i></a>
-                            <div class="dropdown-content">
-                                <ul class="dropdown-links">
-                                    <li><a href="#">Father's Day</a></li>
-                                    <li><a href="#">Mother's Day</a></li>
-                                    <li><a href="#">Valentines</a></li>
-                                </ul>
-                            </div>
-                        </li>
+                        <li><a href="./promotion.html"> Promotions </a></li>
                     </div>
                     <li><a href="/order online.html"> Order online </a></li>
                 </ul>
-            </div>
-            <!--nav-links-container-->
-            <button id="contact-btn"> <a href="#">Contact Us</a> </button>
+            </div><!-- nav-links-container-->
+            <a href="tel:+263777613303" class="phone"><i class="fas fa-phone-alt"></i> +263777613303</a>
+            <div class="collapsed-nav">
+                <input type="checkbox" class="toggler">
+                <div class="hamburger">
+                    <div></div>
+                </div>
+                <div class="menu">
+                    <div class="overlay">
+                        <div>
+                            <ul class="collapsed-nav-links">
+                                <li><a href="/index.html"> Home</a></li>
+                                <li><a href="#"> Categories <i class="fas fa-angle-down"></i></a></li>
+                                <li><a href="/gallery.html"> Gallery</a></li>
+                                <li><a href="./promotion.html"> Promotions </a></li>
+                                <li><a href="/order online.html"> Order online </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- collapsed-nav-->
         </div>
-    </nav>
-    <br>
+        
+        </nav>
+    </header>   
     <div class="carousel-container">
-        <div class="carousel-slide">
-            <div class="image-tile"><img width="500px" height="500px" id="lastClone" src="images/Carousel/baby 1.jpg"
-                    alt="New">
+        <div class="slider">
+            <div class="slide current">
+                <div class="content">
+                    <h3>Slide 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore veniam quidem explicabo officiis quos culpa.</p>
+                </div>
             </div>
-            <div class="image-tile">
-                <img width="500px" id="og1" src="images/Carousel/New.jpg" alt="New">
+            <div class="slide ">
+                <div class="content">
+                    <h3>Slide 2</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore veniam quidem explicabo officiis quos culpa.</p>
+                </div>
             </div>
-            <div class="image-tile">
-                <img width="500px" id="og1" src="images/Carousel/fancy 1.png" alt="New">
+            <div class="slide  ">
+                <div class="content">
+                    <h3>Slide 3</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore veniam quidem explicabo officiis quos culpa.</p>
+                </div>
             </div>
-            <div class="image-tile">
-                <img width="500px" id="og1" src="images/Carousel/cup 1.jpg" alt="New">
+            <div class="slide ">
+                <div class="content">
+                    <h3>Slide 4</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore veniam quidem explicabo officiis quos culpa.</p>
+                </div>
             </div>
-            <div class="image-tile">
-                <img width="500px" id="og1" src="images/Carousel/baby 1.jpg" id="firstClone" alt="New">
+            <div class="slide ">
+                <div class="content">
+                    <h3>Slide 5</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore veniam quidem explicabo officiis quos culpa.</p>
+                </div>
             </div>
         </div>
-        <button id="pBtn" <i class="far fa-arrow-alt-circle-left"></i></button>
-        <button id="nBtn" <i class="far fa-arrow-alt-circle-right"></i></button>
+        <button id="prev-Btn" class="prev"><i class="fas fa-chevron-circle-left"></i></button>
+        <button id="next-Btn" class="next"><i class="fas fa-chevron-circle-right"></i></button>
     </div>
-
-    <br>
-    <section>
-        <h2 id="testimonial-head">Testimonials</h2>
-        <div class="testimonial-container">
-            <div class="testimony">
-                <p class="quotes">"</p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-                architecto debitis,
-                exercitationem
-                harum
-                quas
-                vitae deserunt perferendis officia minima aspernatur iure mollitia optio dolores labore esse?
-                Quaerat
-                esse
-                cupiditate sint!
-            </div>
-            <div class="testimony">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates dolorum quibusdam illo unde.
-                Voluptatem
-                aspernatur soluta aperiam obcaecati voluptas id! Dolor adipisci molestias inventore unde. Facere
-                necessitatibus
-                fugit nam provident.
-            </div>
-            <div class="testimony">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur architecto debitis, exercitationem
-                harum
-                quas
-                vitae deserunt perferendis officia minima aspernatur iure mollitia optio dolores labore esse?
-                Quaerat
-                esse
-                cupiditate sint!
-            </div>
-            <div class="testimony">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur architecto debitis, exercitationem
-                harum
-                quas
-                vitae deserunt perferendis officia minima aspernatur iure mollitia optio dolores labore esse?
-                Quaerat
-                esse
-                cupiditate sint!
+</section>
+    <section id="About">
+        <div class="welcome-container">
+            <div class="welcome">
+                <h2>Welcome to Tantalize Bakes</h2>
+                <h6>...A taste of the future</h6>
+                 <div class="welcome-message">
+                        <p>We are a bakery dedicated to creating products with an uncompromised taste</p>
+                        <p>Tantalize Bakes is a bakery in Harare, Zimbabwe. We make custom cakes and cupcakes with the finest ingredients and we hand decorate them with the utmost attention to detail. We’re seriously passionate about cakes and cupcakes and bringing joy to people through the sweeter things in life.</p>
+                        <p>We specialize in excellent taste and texture in all our bakery products, safe for those with Celiac Disease or who are gluten intolerant and sensitive. A healthy lifestyle choice for all. </p>    
+                        
+                    </div>
+                    <a href="#chef-rue" class="meet-chef-btn">Meet Chef Rue <i class="fas fa-chevron-down"></i></a>
+                 </div>
+                 <a href="#Home" class="to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        </div>
+        
+        <div class="chef-container" id="chef-rue">
+            <div class="grid-container">
+                <div class="chef-message">
+                    <h2>Chef Rue</h2>
+                    <p>is a fourth-generation baker born into the business owned & operated by her parents. Countless hours were spent in the bakery where her Mother, Mrs Salani., a master baker, taught Chef Rue everything about baking and running a business. They dreamed that together, they would make Tantalize Bakes Bakery a household name.</p>
+                    <p>Tantalize Bakes is a bakery in Harare, Zimbabwe. We make custom cakes and cupcakes with the finest ingredients and we hand decorate them with the utmost attention to detail. We’re seriously passionate about cakes and cupcakes and bringing joy to people through the sweeter things in life.</p>
+                </div>
+                <div class="image-thumb">
+                    <img src="./images/Thumbnails/Chef Rue's Thumb 01.jpg" alt="" srcset="">
+                </div>
             </div>
         </div>
     </section>
-    <br>
+    <div class="made-with-love">
+        <h2>Made With Love</h2>
+        <div class="grid-container">
+            <div class="card">
+                <img src="./images/Thumbnails/grants cake.jpg" alt="" srcset="">
+                <h3>Specialized</h3>
+                <p>We make everything from scratch to fit your specialized health needs.</p>
+            </div>
+            <div class="card">
+                <img src="./images/Thumbnails/flower rainbow.jpg" alt="" srcset="">
+                <h3>Service</h3>             
+                <p>We hope to always meet your health needs and do it with a smile.</p>
+            </div>
+            <div class="card">
+                <img src="./images/Thumbnails/Chef Rue's Thumb 01.jpg" alt="" srcset="">
+                <h3>Love</h3>          
+                <p>Every cake needs that special ingredient we call love.</p>
+            </div>
+            <div class="card">
+                <img src="./images/Thumbnails/pink flower.jpg" alt="" srcset="">
+                <h3>Safe</h3>          
+                <p>We want you to feel secure about our products so you can enjoy every last bite.</p>
+            </div>
+        </div>
+    </div>
+    <section id="testimonials">
+        <div class="testimonial-container">
+            <h2>What People Say</h2>
+            <div class="grid-container">
+                <div class="testimony">
+                    <div class="card">
+                        <h3 class="reviewer-name">Beast Boy</h3>
+                        <h4 class="media">Instagram</h4>
+                        <blockquote>Lorem  ipsum dolor sit amet consectetur adipisicing elit. Voluptates dolorum quibusdam illo unde.
+                            Voluptatem
+                            aspernatur soluta aperiam obcaecati voluptas id! Dolor adipisci molestias inventore unde. Facere
+                            necessitatibus
+                            fugit nam provident.
+                        </blockquote> 
+                    </div>
+                </div>
+                <div class="testimony">
+                    <div class="card">
+                        <h3 class="reviewer-name">Susan Lowe</h3>
+                    <h4 class="media">Facebook</h4> 
+                    <blockquote>Lorem  ipsum dolor sit amet consectetur adipisicing elit. Voluptates dolorum quibusdam illo unde.
+                        Voluptatem
+                        aspernatur soluta aperiam obcaecati voluptas id! Dolor adipisci molestias inventore unde. Facere
+                        necessitatibus
+                        fugit nam provident.
+                    </blockquote> 
+                    </div>
+                </div>
+                <div class="testimony">
+                    <div class="card"><h3 class="reviewer-name">Candice Mashavi</h3>
+                        <h4 class="media">Whatsapp</h4> 
+                        <blockquote>Lorem  ipsum dolor sit amet consectetur adipisicing elit. Voluptates dolorum quibusdam illo unde.
+                            Voluptatem
+                            aspernatur soluta aperiam obcaecati voluptas id! Dolor adipisci molestias inventore unde. Facere
+                            necessitatibus
+                            fugit nam provident.
+                        </blockquote> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2 class="title">Contact Us.</h2>
+        <form action="contact.php" method="POST">
+            <div class="contact-container">
+                <label for="Name"> <b>Name:</b> </label>
+                <input type="text" name="subject" id="name-input" placeholder="Enter your name here">
+                <label for="Email"><b>Email:</b></label>
+                <input type="email" name="email" id="email-input" placeholder="Enter your email here">
+                <label for="Message"><b>Message:</b></label>
+                <textarea name="message" id="inquiry_message" cols="30" rows="10"
+                    placeholder="Enter your message here"></textarea>
+                <button type="submit" id="send-message">Send <i class="fas fa-paper-plane"></i></button>
+            </div>
+        </form>
 
     <footer>
         <div class="footer-container">
-            <div class="footer-col">
-                <ul>
-                    <li>About us</li>
-                    <li>About us</li>
-                    <li>About us</li>
-                </ul>
+               <div class="footer-left">
+                   <img src="./images/logo/Tantalize Bakes logo 09.png" alt="">
+                   <p>Kilwining</p>
+                   <p>Hatfield, Harare, ZW</p>
+                   <p>E:tantalziebakes@gmail.com</p>
+                   <p><a href="tel:+263777613303">+263777613303</a></p>
+               </div>
+            <div class="mailing">
+                <h4>Join Our Mailing List</h4>
+                <input type="text" placeholder="Email address">
+                <label for="">Sign Up</label>
             </div>
-            <div class="footer-col">
-                <ul>
-                    <li>Contact us</li>
-                    <li>Contact us</li>
-                    <li>Contact us</li>
-                </ul>
+            <div class="footer-right">
+                <h4>Connect with us</h4>
+                <a href="https://github.com/Godwill700" target="_blank" <i class="fab fa-facebook-square"></i></a>
+                <a href="https://github.com/Godwill700" target="_blank" <i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/Godwill700" target="_blank" <i class="fab fa-whatsapp"></i></a>
             </div>
-            <div id="powered-by"><span>Site by Beastboy Tech</span></div>
+           
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-nav">
+                <p><a href="#Home">Home</a>
+                <a href="./gallery.html">Gallery</a>
+                <a href="./promotion.html">Promotions</a>
+                <a href="./order online.html">Order online</a></p>
+            </div>
+            <div class="copyright-text"><p>Copyright &copy; Tantalize Bakes 2020 | <a href="https://hardcore-kalam-5840d9.netlify.app/#message" class="site-by">Site by Devplus Tech: Charles Chinyemba</a></p></div>
+            
         </div>
     </footer>
 

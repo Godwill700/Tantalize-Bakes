@@ -1,0 +1,10 @@
+// ******Variables*********
+$primaryColor: #fa249e;
+$footerColor: #14000c;
+
+// ******mixin*********
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

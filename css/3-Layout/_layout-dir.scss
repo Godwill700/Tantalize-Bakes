@@ -1,0 +1,546 @@
+// Helpers
+@import "../1-Helpers/helpers-dir";
+
+// Home Section styles
+#Home {
+  height: 100vh;
+  overflow: hidden;
+}
+
+/**************Nav-bar styles**************/
+.nav-container {
+  display: flex;
+  margin: 0em auto;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 5px 5px 10px #000000;
+}
+
+.nav-links,
+.nav-links a {
+  display: flex;
+  align-items: flex-end;
+  text-decoration: none;
+  list-style: none;
+  padding: 0em 0.625rem;
+  font-size: 1.5em;
+  color: $primaryColor;
+  font-weight: 700;
+}
+
+.fa-angle-down {
+  padding-left: 3px;
+  font-size: 0.8em;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.dropdown {
+  position: relative;
+}
+.dropdown-content {
+  width: 200px;
+  position: absolute;
+  background-color: rgba($color: $primaryColor, $alpha: 1);
+  display: none;
+  border-radius: 5px;
+  & ul {
+    list-style: none;
+    font-size: 1.2em;
+  }
+  & a {
+    background-color: rgba($color: #ffffff, $alpha: 1);
+  }
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  z-index: 10;
+}
+.nav-links a:hover,
+.nav-links a:focus {
+  background-color: rgba($color: $primaryColor, $alpha: 1);
+  color: #ffffff;
+}
+
+/********logo**********/
+.brand-container {
+  float: left;
+  & .logo {
+    width: 100px;
+    padding-left: 20px;
+  }
+}
+.collapsed-nav {
+  display: none;
+}
+/********** Desktop**********/
+@media (max-width: 991px) {
+  #home {
+    height: auto;
+  }
+  .brand-container {
+    & .logo {
+      width: 80px;
+    }
+  }
+  .nav-links-container,
+  .phone {
+    display: none;
+  }
+
+  /******************Collapsed nav*******************/
+  .collapsed-nav {
+    display: block;
+    position: absolute;
+    float: right;
+    z-index: 10;
+    top: 0px;
+    right: 20px;
+  }
+  .toggler {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 45px;
+    right: 5px;
+    float: right;
+    // margin: 0px 14px 0px 0px;
+    z-index: 10;
+    opacity: 0;
+    cursor: pointer;
+
+    &:checked + .hamburger > div {
+      transform: rotate(135deg);
+      transition: $animate;
+      background-color: $menuBackground;
+
+      //Make an X on check
+      //collapse and extend div rotation
+      &::before,
+      &::after {
+        top: 0;
+        transform: rotate(90deg);
+      }
+    }
+    &:checked:hover + .hamburger > div {
+      transform: rotate(360deg);
+      transition: $animate;
+    }
+    &:checked ~ .menu {
+      display: flex;
+      pointer-events: all;
+    }
+    &:checked ~ .menu > .overlay {
+      transform: scale(1);
+      transition: $animate;
+      transition-duration: $transitionSpeed;
+    }
+    &:checked ~ .menu > .overlay > div {
+      //    opacity: 0.75;
+    }
+  }
+  .hamburger {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    @include flexCenter();
+    z-index: 1;
+    background-color: rgba($color: #ffffff, $alpha: 0.5);
+    border-radius: 5px;
+    box-shadow: -3px 3px 5px #54c6eb;
+    width: 50px;
+    height: 50px;
+    padding: 1em 1rem;
+
+    > div {
+      position: relative;
+      background-color: $primaryColor;
+      height: 2px;
+      width: 100%;
+
+      &::before,
+      &::after {
+        content: "";
+        height: 2px;
+        width: 100%;
+        background: inherit;
+        position: absolute;
+        top: -10px;
+        z-index: 1;
+      }
+      //adding hamburger bottom line
+      &::after {
+        top: 10px;
+      }
+    }
+  }
+  .menu {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    @include flexCenter();
+    height: 70vh;
+    width: 20em;
+    overflow: hidden;
+    display: none;
+    border-radius: 0px 0px 50px 50px;
+    pointer-events: none;
+    opacity: 0.7;
+    background: url("../../images/Background/beige-tiles.png") no-repeat center
+      center/cover;
+
+    & .overlay {
+      @include flexCenter();
+      height: 150vw;
+      width: 150vw;
+      background: rgb(252, 196, 205);
+      transform: scale(0);
+      transition: $animate;
+      // border-radius: 150px;
+      border-radius: 60%;
+
+      div {
+        width: 100vw;
+        @include flexCenter();
+        // flex: none;
+        background: inherit;
+        text-align: left;
+
+        & .collapsed-nav-links {
+          background: inherit;
+        }
+
+        & .collapsed-nav-links li {
+          background: inherit;
+          list-style: none;
+          margin: 15px;
+          padding: 0.75em 0.75rem;
+          font-size: 1em;
+
+          color: $primaryColor;
+          width: 100%;
+          border-radius: 10px;
+
+          &:hover,
+          &:focus {
+            color: #000000;
+            background-color: $primaryColor;
+          }
+          a {
+            text-decoration: none;
+            background-image: inherit;
+            color: inherit;
+            font-size: 1.8em;
+            font-weight: 700;
+            width: 20em;
+          }
+        }
+      }
+    }
+  }
+}
+
+/**************Image slider styles*****************/
+.carousel-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+/*********Meet Chef section styles************/
+#About {
+  .welcome-container {
+    background: $backgroundColor1;
+    display: flex;
+    // height: 80vh;
+
+    .welcome {
+      width: 80%;
+      margin: 0em auto;
+
+      & h2 {
+        text-align: center;
+        background: inherit;
+        color: #ffffff;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+.to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 50px;
+  z-index: 10;
+  background-color: $primaryColor;
+  border: none;
+  background: transparent;
+  & .fas {
+    outline: none;
+    font-size: 2em;
+    background-color: inherit;
+    color: rgba(116, 101, 110, 0.5);
+    padding: 0.2em 0.2rem;
+  }
+}
+.chef-container {
+  width: 80%;
+  margin: 3em auto 0em auto;
+  height: 100vh;
+
+  & .grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 3rem;
+  }
+}
+
+/*******Tablet devices********/
+@media (min-width: 575px) and (max-width: 767px) {
+  .chef-container {
+    width: 80%;
+    margin: 3em auto 0em auto;
+    height: auto;
+
+    & .grid-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      margin-bottom: 3em;
+      & .image-thumb {
+        & img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+/********** Mobile phones**********/
+@media (max-width: 575px) {
+  .chef-container {
+    width: 90%;
+    margin: 3em auto 0em auto;
+    height: auto;
+
+    & .grid-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      margin-bottom: 3em;
+      & .image-thumb {
+        & img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+/********Made with love styles**********/
+.made-with-love {
+  padding-bottom: 3rem;
+  & h2 {
+    padding-bottom: 2em;
+  }
+  & .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    width: 80%;
+    margin: auto;
+  }
+}
+/********** Desktop**********/
+@media (min-width: 767px) and (max-width: 991px) {
+  .made-with-love {
+    & .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+/*******Tablet devices********/
+@media (min-width: 575px) and (max-width: 767px) {
+  .made-with-love {
+    & .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+/********** Mobile phones**********/
+@media (max-width: 575px) {
+  .made-with-love {
+    & .grid-container {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+// Testimony styles
+#testimonials {
+  height: 100vh;
+}
+.testimonial-container {
+  width: 80%;
+  margin: auto;
+
+  & h2 {
+    padding: 2em 0rem;
+  }
+
+  & .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    column-gap: 2rem;
+    // padding: 2em;
+    & .testimony {
+      padding: 10px;
+      & blockquote {
+        padding: -15px;
+      }
+    }
+  }
+}
+/********** Desktop**********/
+@media (min-width: 767px) and (max-width: 991px) {
+  #testimonials {
+    height: auto;
+    padding-bottom: 6em;
+  }
+  .testimonial-container {
+    width: 90%;
+    margin: auto;
+  }
+}
+/*******Tablet devices********/
+@media (min-width: 575px) and (max-width: 767px) {
+  #testimonials {
+    height: auto;
+  }
+  .testimonial-container {
+    & .grid-container {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 2rem;
+      & .testimony {
+        margin: 2rem auto;
+      }
+    }
+  }
+}
+/********** Mobile phones**********/
+@media (max-width: 575px) {
+  #testimonials {
+    height: auto;
+  }
+  .testimonial-container {
+    width: 92%;
+    & .grid-container {
+      width: 100%;
+      margin: 0px;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 2rem;
+      & .testimony {
+        margin: 2rem auto;
+      }
+    }
+  }
+}
+
+//Contact Us styles
+#contact {
+  height: 85vh;
+  background: #ececec;
+  & h2 {
+    padding: 2em 0rem;
+  }
+}
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 50%;
+  margin: auto;
+  padding: 10px 20px 50px 20px;
+}
+/********** Desktop**********/
+@media (min-width: 767px) and (max-width: 991px) {
+  .contact-container {
+    width: 80%;
+  }
+}
+/*******Tablet devices********/
+@media (min-width: 575px) and (max-width: 767px) {
+  .contact-container {
+    width: 80%;
+  }
+}
+/********** Mobile phones**********/
+@media (max-width: 575px) {
+  .contact-container {
+    width: 92%;
+  }
+}
+
+/*******footer styles********/
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 2em;
+}
+/*******Tablet devices********/
+@media (min-width: 575px) and (max-width: 767px) {
+  .footer-bottom {
+    justify-content: center;
+    & .copyright-text {
+      display: flex;
+    }
+  }
+}
+/********** Mobile phones**********/
+@media (max-width: 575px) {
+  footer {
+    height: auto;
+  }
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    & .mailing {
+      padding-top: 2em;
+      & > h4 {
+        text-align: center;
+      }
+    }
+    & .footer-right {
+      padding-top: 2em;
+    }
+  }
+  .footer-bottom {
+    justify-content: center;
+    & .copyright-text {
+      display: flex;
+    }
+  }
+}
+/********** Extra small devices**********/
+@media (max-width: 350px) {
+  .mailing {
+    label {
+      display: block;
+      margin: 1em auto 1em auto;
+      width: 50%;
+      text-align: center;
+    }
+  }
+}

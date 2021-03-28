@@ -1,0 +1,169 @@
+.nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0em auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 5px 5px 10px #000000;
+          box-shadow: 5px 5px 10px #000000;
+}
+
+.nav-links-container {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.nav-links,
+.nav-links a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  /* justify-content: left; */
+  text-decoration: none;
+  list-style: none;
+  padding: 10px;
+  font-size: 1.3em;
+  color: #fa249e;
+  font-weight: 600;
+}
+
+.fa-angle-down {
+  padding-left: 3px;
+  font-size: 0.8em;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  width: 200px;
+  position: absolute;
+  background-color: #fa249e;
+  display: none;
+  border-radius: 5px;
+}
+
+.dropdown-content ul {
+  list-style: none;
+  font-size: 1.2em;
+}
+
+.dropdown-content a {
+  background-color: rgba(255, 255, 255, 0.01);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  z-index: 10;
+  border-radius: 50px;
+}
+
+.nav-links a:hover {
+  background-color: #fa249e;
+  color: #fff;
+  border-radius: 50px;
+}
+
+.brand-container {
+  float: left;
+}
+
+.brand-container .logo {
+  width: 100px;
+}
+
+#contact-btn,
+#contact-btn a {
+  background-color: #fa249e;
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 10px;
+  color: #fff;
+}
+
+#contact-btn {
+  border: 2px solid #000;
+  border-radius: 10px;
+}
+
+#contact-btn:hover {
+  -webkit-box-shadow: 2px 2px 15px #000000;
+          box-shadow: 2px 2px 15px #000000;
+  font-size: 120%;
+}
+
+.carousel-container {
+  margin: 0em auto;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+#pBtn {
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  font-size: 2.2em;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: #fff;
+}
+
+#nBtn {
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  font-size: 2.2em;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: #fff;
+}
+
+.footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: #14000c;
+  color: #fff;
+  position: relative;
+}
+
+.footer-col ul li {
+  background-color: #14000c;
+  list-style: none;
+}
+
+#powered-by span {
+  position: absolute;
+  float: right;
+  bottom: 2px;
+  background-color: #14000c;
+}
+/*# sourceMappingURL=module-dir.css.map */

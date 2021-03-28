@@ -1,0 +1,77 @@
+// Home Section styles
+#Home {
+  height: 100vh;
+  & > Nav {
+    height: 10vh;
+  }
+}
+// Meet Chef section styles
+#About {
+  height: 100vh;
+}
+.about-container {
+  width: 80%;
+  margin: auto;
+
+  & .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+    // border: 5px solid indigo;
+
+    .message {
+      justify-self: center;
+      align-self: center;
+      border: 5px solid indigo;
+      & > h2 {
+        font-size: 2em;
+      }
+      & p {
+        display: flex;
+      }
+    }
+    & img {
+      width: 400px;
+      // height: 400px;
+      float: right;
+      border: 5px solid indigo;
+    }
+  }
+  padding: 1em;
+  .message-container {
+    padding: 1em;
+    font-size: 1.4em;
+    padding: 0.75em;
+  }
+}
+
+// Testimony styles
+#testimonial-head {
+  font-size: 1.4em;
+  padding: 20px;
+  justify-content: left;
+  margin: 20px auto 20px 48px;
+}
+.testimonial-container {
+  display: flex;
+  justify-content: space-around;
+  .testimony {
+    width: 16.66%;
+    padding: 10px;
+    background-color: #fec0e3;
+    border-radius: 10px;
+    font-style: italic;
+  }
+}
+
+/********** Desktop**********/
+@media (min-width: 768px) {
+}
+
+/*******Tablet devices********/
+@media (min-width: 576px) and (max-width: 767px) {
+}
+
+/********** Mobile phones**********/
+@media (max-width: 575px) {
+}

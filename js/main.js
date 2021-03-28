@@ -1,58 +1,101 @@
-const carouselSlide = document.querySelector(".carousel-slide");
-const carouselImages = document.querySelectorAll(".carousel-slide img");
+const slides = document.querySelectorAll(".slide");
+const prev = document.querySelector("#prev-Btn");
+const next = document.querySelector("#next-Btn");
+const auto = true;
+const intervalTime = 5000;
+let slideInterval;
 
+const nextSlide = () => {
+  // Get current class
+  const current = document.querySelector(".current");
+  // Remove current class
+  current.classList.remove("current");
+  // Check for next slide
+  if (current.nextElementSibling) {
+    // Add current to next sibling
+    current.nextElementSibling.classList.add("current");
+  } else {
+    // Add current to start
+    slides[0].classList.add("current");
+  }
+  setTimeout(() => current.classList.remove("current"));
+};
+const prevSlide = () => {
+  // Get current class
+  const current = document.querySelector(".current");
+  // Remove current class
+  current.classList.remove("current");
+  // Check for previous slide
+  if (current.previousElementSibling) {
+    // Add current to previous sibling
+    current.previousElementSibling.classList.add("current");
+  } else {
+    // Add current to last
+    slides[slides.length - 1].classList.add("current");
+  }
+  setTimeout(() => current.classList.remove("current"));
+};
 
-//Buttons
-const prevBtn = document.querySelector("#pBtn");
-const nextBtn = document.querySelector("#nBtn");
-
-
-// counter
-let counter = 1;
-const size = carouselImages[0].clientWidth;
-
-
-carouselSlide.style.transform = `translateX(${-size * counter}px)`;
-
-//button Listeners
-
-nextBtn.addEventListener("click", () => {
-
-    carouselSlide.style.transition = "transform 0.4s ease-in-out";
-    counter++;
-    carouselSlide.style.transform = `translateX(${-size * counter}px)`;
-    console.log(counter)
-
+// Add event listeners
+next.addEventListener("click", (e) => {
+  nextSlide();
+  if (auto) {
+    // Run slide at interval time and reset the interval timer on click
+    clearInterval(slideInterval);
+    slideInterval = setInterval(nextSlide, intervalTime);
+  }
 });
 
-prevBtn.addEventListener("click", () => {
-    carouselSlide.style.transition = "transform 0.4s ease-in-out";
-    counter--;
-    carouselSlide.style.transform = `translateX(${-size * counter}px)`;
-    console.log(counter)
+prev.addEventListener("click", (e) => {
+  prevSlide();
+  if (auto) {
+    // Run slide at interval time and reset the interval timer on click
+    clearInterval(slideInterval);
+    slideInterval = setInterval(nextSlide, intervalTime);
+  }
 });
+//  Auto slide
+if (auto) {
+  // Run next slide at interval time
+  slideInterval = setInterval(nextSlide, intervalTime);
+}
 
+/**************Hamburger ***************/
+const hamburgerToggler = document.querySelector(".toggler");
+// const checked = true
+// while (hamburgerToggler.checked = checked) {
 
-//slide loop
-
-carouselSlide.addEventListener("transitionend", () => {
-    console.log(carouselImages[counter].id)
-    if (carouselImages[counter].id === "lastClone") {
-        carouselSlide.style.transition = "none";
-        counter = carouselImages.length - 2;
-        carouselSlide.style.transform = `translateX(${-size * counter}px)`;
-    };
-    if (carouselImages[counter].id === "firstClone") {
-        carouselSlide.style.transition = "none";
-        counter = carouselImages.length - counter; //-5 normal
-        carouselSlide.style.transform = `translateX(${-size * counter}px)`;
-        console.log(carouselImages.length)
+// }
+document.addEventListener("click", (e) => {
+  (() => {
+    if (hamburgerToggler.checked) {
+      // document.addEventListener("click", (e) => {
+      // setTimeout((e,3000))
+      hamburgerToggler.checked = e.target === hamburgerToggler;
+      // else{
+      //     hamburgerToggler.checked = false
+      // }
+      // console.log(hamburgerToggler.checked);
+      // })
+      console.log(e.target.classList);
     }
+  })();
 });
 
-//change image
+/**************Scroll to top ***************/
 
-carouselSlide.addEventListener("mouseover", () => {
-    carouselSlide.style.transition = "none"
+const backtoTop = document.querySelector(".to-top");
+window.onload = (e) => {
+  backtoTop.style.display = "none";
+};
+window.onscroll = function () {
+  scrollFunction();
+};
 
-})
+function scrollFunction() {
+  if (window.pageYOffset > 200) {
+    backtoTop.style.display = "block";
+  } else {
+    backtoTop.style.display = "none";
+  }
+}

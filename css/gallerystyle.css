@@ -19,15 +19,15 @@
     margin:0px auto;
     padding: 10px;
     display: grid;
-    grid-template-columns:repeat(3, 1fr);
-    column-gap: 1em;
-    row-gap: 1em;
+    grid-template-columns:repeat(3, minmax(12.5rem,1fr));
+    gap: 1em;
     position: relative;
     cursor: pointer;
     border: 2px solid red;
 }
 .grid-item{
     width: 100%;
+    object-fit: cover;
 }
 #lightbox{
     position: fixed;

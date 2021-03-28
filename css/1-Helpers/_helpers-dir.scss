@@ -1,0 +1,18 @@
+$primaryColor: #fa249e;
+$secondaryColor: indigo;
+$footerLinkColor: #968790;
+$footerColor: #011627;
+$footerTextColor: #d9d0de;
+$backgroundImage1: url(../../images/Background/ignasi_pattern_s.png);
+$backgroundColor1: #fa249e;
+$externalLinksColor: rgb(50, 13, 77);
+$greyColor: #e4dede;
+$animate: all 0.4s ease;
+$transitionSpeed: 0.45s;
+$menuBackground: #000000;
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

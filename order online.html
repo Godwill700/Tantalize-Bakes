@@ -5,21 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Online</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/order.css">
     <script src="https://kit.fontawesome.com/6998af91f9.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
-        <div class="header-container">
-            <h1 class="mainhead">Tantalize Bakes</h1>
-            <h6 class="submain">....A taste of the future</h6>
+        <div class="external-links-container">
+            <div class="external-contact">
+                <span>|E:tantalziebakes@gmail.com</span>
+            </div>
+        <div class="social-media-links">
+            <a href="https://github.com/Godwill700" target="_blank" <i class="fab fa-facebook-square"></i></a>
+            <a href="https://github.com/Godwill700" target="_blank" <i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/Godwill700" target="_blank" <i class="fab fa-whatsapp"></i></a>
         </div>
-    </header>
-    <nav>
+        </div>
+        
+        <nav>
         <div class="nav-container">
-            <img class="logo" src="images/cupcakelogo.jpg" alt="logo" width="50">
+            <div class="brand-container">
+                <a href="#Home"><img class="logo" src="./images/logo/Tantalize Bakes logo 09.png" alt=""></a>
+                
+            </div>
             <div class="nav-links-container">
                 <ul class="nav-links">
                     <li><a href="/index.html"> Home</a></li>
@@ -39,23 +48,35 @@
                     </div>
                     <li><a href="/gallery.html"> Gallery</a></li>
                     <div class="dropdown">
-                        <li><a href="#"> Promotions <i class="fas fa-angle-down"></i></a>
-                            <div class="dropdown-content">
-                                <ul class="dropdown-links">
-                                    <li><a href="#">Father's Day</a></li>
-                                    <li><a href="#">Mother's Day</a></li>
-                                    <li><a href="#">Valentines</a></li>
-                                </ul>
-                            </div>
-                        </li>
+                        <li><a href="./promotion.html"> Promotions </a></li>
                     </div>
                     <li><a href="/order online.html"> Order online </a></li>
                 </ul>
-            </div>
-            <!--nav-links-container-->
-            <button id="contact-btn"> <a href="#">Contact Us</a> </button>
+            </div><!-- nav-links-container-->
+            <a href="tel:+263777613303" class="phone"><i class="fas fa-phone-alt"></i> +263777613303</a>
+            <div class="collapsed-nav">
+                <input type="checkbox" class="toggler">
+                <div class="hamburger">
+                    <div></div>
+                </div>
+                <div class="menu">
+                    <div class="overlay">
+                        <div>
+                            <ul class="collapsed-nav-links">
+                                <li><a href="/index.html"> Home</a></li>
+                                <li><a href="#"> Categories <i class="fas fa-angle-down"></i></a></li>
+                                <li><a href="/gallery.html"> Gallery</a></li>
+                                <li><a href="./promotion.html"> Promotions </a></li>
+                                <li><a href="/order online.html"> Order online </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- collapsed-nav-->
         </div>
-    </nav>
+        
+        </nav>
+    </header> 
     <br>
     <div>
         <h1 class="pagehead">Order online</h1>
@@ -156,23 +177,38 @@
     </div>
     <footer>
         <div class="footer-container">
-            <div class="footer-col">
-                <ul>
-                    <li>About us</li>
-                    <li>About us</li>
-                    <li>About us</li>
-                </ul>
+               <div class="footer-left">
+                   <img src="./images/logo/Tantalize Bakes logo 09.png" alt="">
+                   <p>Kilwining</p>
+                   <p>Hatfield, Harare, ZW</p>
+                   <p>E:tantalziebakes@gmail.com</p>
+                   <p><a href="tel:+263777613303">+263777613303</a></p>
+               </div>
+            <div class="mailing">
+                <h4>Join Our Mailing List</h4>
+                <input type="text" placeholder="Email address">
+                <label for="">Sign Up</label>
             </div>
-            <div class="footer-col">
-                <ul>
-                    <li>Contact us</li>
-                    <li>Contact us</li>
-                    <li>Contact us</li>
-                </ul>
+            <div class="footer-right">
+                <h4>Connect with us</h4>
+                <a href="https://github.com/Godwill700" target="_blank" <i class="fab fa-facebook-square"></i></a>
+                <a href="https://github.com/Godwill700" target="_blank" <i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/Godwill700" target="_blank" <i class="fab fa-whatsapp"></i></a>
             </div>
-            <div id="powered-by"><span>Site by Beastboy Tech</span></div>
+           
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-nav">
+                <p><a href="#Home">Home</a>
+                <a href="./gallery.html">Gallery</a>
+                <a href="./promotion.html">Promotions</a>
+                <a href="./order online.html">Order online</a></p>
+            </div>
+            <div class="copyright-text"><p>Copyright &copy; Tantalize Bakes 2020 | <a href="https://hardcore-kalam-5840d9.netlify.app/#message" class="site-by">Site by Devplus Tech: Charles Chinyemba</a></p></div>
+            
         </div>
     </footer>
+    <script src="./js/main.js"></script>
     <script src="./js/order.js"></script>
 </body>
 
