@@ -24,13 +24,14 @@
   & .social-media-links {
     float: right;
     @extend .external-contact;
-    background-color: inherit;
+    // background-color: inherit;
     color: #ffffff;
 
     & a {
       padding: 0em 0.3rem;
       background-color: inherit;
       color: #ffffff;
+      text-decoration: none;
     }
   }
 }

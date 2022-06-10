@@ -697,7 +697,6 @@ li {
 
 .external-links-container .social-media-links {
   float: right;
-  background-color: inherit;
   color: #ffffff;
 }
 
@@ -705,6 +704,7 @@ li {
   padding: 0em 0.3rem;
   background-color: inherit;
   color: #ffffff;
+  text-decoration: none;
 }
 
 /********** Mobile phones**********/
