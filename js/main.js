@@ -72,11 +72,7 @@ document.addEventListener("click", (e) => {
       // document.addEventListener("click", (e) => {
       // setTimeout((e,3000))
       hamburgerToggler.checked = e.target === hamburgerToggler;
-      // else{
-      //     hamburgerToggler.checked = false
-      // }
-      // console.log(hamburgerToggler.checked);
-      // })
+
       console.log(e.target.classList);
     }
   })();

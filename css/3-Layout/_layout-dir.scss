@@ -104,7 +104,6 @@
     top: 45px;
     right: 5px;
     float: right;
-    // margin: 0px 14px 0px 0px;
     z-index: 10;
     opacity: 0;
     cursor: pointer;
@@ -147,7 +146,7 @@
     z-index: 1;
     background-color: rgba($color: #ffffff, $alpha: 0.5);
     border-radius: 5px;
-    box-shadow: -3px 3px 5px #54c6eb;
+    box-shadow: -3px 3px 5px #043849;
     width: 50px;
     height: 50px;
     padding: 1em 1rem;
@@ -197,7 +196,7 @@
       transform: scale(0);
       transition: $animate;
       // border-radius: 150px;
-      border-radius: 60%;
+      border-radius: 5%;
 
       div {
         width: 100vw;
@@ -211,24 +210,28 @@
         }
 
         & .collapsed-nav-links li {
-          background: inherit;
+          background-color: inherit;
           list-style: none;
           margin: 15px;
           padding: 0.75em 0.75rem;
           font-size: 1em;
 
           color: $primaryColor;
-          width: 100%;
+          // width: 100%;
           border-radius: 10px;
+
+          a {
+            background-color: inherit;
+          }
 
           &:hover,
           &:focus {
-            color: #000000;
+            color: #ffffff;
             background-color: $primaryColor;
           }
           a {
             text-decoration: none;
-            background-image: inherit;
+            // background-image: inherit;
             color: inherit;
             font-size: 1.8em;
             font-weight: 700;
