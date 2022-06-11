@@ -134,9 +134,6 @@
       transition: $animate;
       transition-duration: $transitionSpeed;
     }
-    &:checked ~ .menu > .overlay > div {
-      //    opacity: 0.75;
-    }
   }
   .hamburger {
     position: absolute;
@@ -184,7 +181,7 @@
     display: none;
     border-radius: 0px 0px 50px 50px;
     pointer-events: none;
-    opacity: 0.7;
+    // opacity: 0.99;
     background: url("../../images/Background/beige-tiles.png") no-repeat center
       center/cover;
 
@@ -192,7 +189,7 @@
       @include flexCenter();
       height: 150vw;
       width: 150vw;
-      background: rgb(252, 196, 205);
+      background-color: $externalLinksColor;
       transform: scale(0);
       transition: $animate;
       // border-radius: 150px;
