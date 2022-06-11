@@ -67,6 +67,7 @@ li {
   font-size: 1.5em;
   color: #fa249e;
   font-weight: 700;
+  border-radius: 5px;
 }
 
 .fa-angle-down {
